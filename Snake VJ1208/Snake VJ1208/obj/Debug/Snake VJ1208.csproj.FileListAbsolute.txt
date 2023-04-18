@@ -1,0 +1,11 @@
+C:\Users\angul\Desktop\Repositorios gitHub\Prac03-Progra-II\Snake VJ1208\Snake VJ1208\bin\Debug\Snake VJ1208.exe.config
+C:\Users\angul\Desktop\Repositorios gitHub\Prac03-Progra-II\Snake VJ1208\Snake VJ1208\bin\Debug\Snake VJ1208.exe
+C:\Users\angul\Desktop\Repositorios gitHub\Prac03-Progra-II\Snake VJ1208\Snake VJ1208\bin\Debug\Snake VJ1208.pdb
+C:\Users\angul\Desktop\Repositorios gitHub\Prac03-Progra-II\Snake VJ1208\Snake VJ1208\obj\Debug\Snake VJ1208.csproj.AssemblyReference.cache
+C:\Users\angul\Desktop\Repositorios gitHub\Prac03-Progra-II\Snake VJ1208\Snake VJ1208\obj\Debug\Snake VJ1208.csproj.SuggestedBindingRedirects.cache
+C:\Users\angul\Desktop\Repositorios gitHub\Prac03-Progra-II\Snake VJ1208\Snake VJ1208\obj\Debug\Snake_VJ1208.Form1.resources
+C:\Users\angul\Desktop\Repositorios gitHub\Prac03-Progra-II\Snake VJ1208\Snake VJ1208\obj\Debug\Snake_VJ1208.Properties.Resources.resources
+C:\Users\angul\Desktop\Repositorios gitHub\Prac03-Progra-II\Snake VJ1208\Snake VJ1208\obj\Debug\Snake VJ1208.csproj.GenerateResource.cache
+C:\Users\angul\Desktop\Repositorios gitHub\Prac03-Progra-II\Snake VJ1208\Snake VJ1208\obj\Debug\Snake VJ1208.csproj.CoreCompileInputs.cache
+C:\Users\angul\Desktop\Repositorios gitHub\Prac03-Progra-II\Snake VJ1208\Snake VJ1208\obj\Debug\Snake VJ1208.exe
+C:\Users\angul\Desktop\Repositorios gitHub\Prac03-Progra-II\Snake VJ1208\Snake VJ1208\obj\Debug\Snake VJ1208.pdb
