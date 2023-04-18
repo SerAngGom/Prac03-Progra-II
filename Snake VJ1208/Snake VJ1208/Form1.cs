@@ -22,24 +22,24 @@ namespace Snake_VJ1208
         private const Keys izquierda = Keys.Left;
         private const Keys derecha = Keys.Right;
         public static int puntos = 0;
-        public static int tiempo = 0;
+        public static double tiempo = 10;
         public Form1()
         {
             InitializeComponent();
             SetStyle(ControlStyles.AllPaintingInWmPaint
                 | ControlStyles.UserPaint
                 | ControlStyles.OptimizedDoubleBuffer
-                | ControlStyles.SupportsTransparentBackColor,true);
+                | ControlStyles.SupportsTransparentBackColor, true);
             this.Text = "Serpiente VJ1208 ...";
             this.Width = anchoEscenario;
             this.Height = altoEscenario;
             this.BackColor = Color.DarkRed;
             serpiente = new Serpiente();
-            Controls.Add( Serpiente.MiPictureBox );
+            Controls.Add(Serpiente.MiPictureBox);
             comida = new Comida();
-            Controls.Add( Comida.MiPictureBox );
+            Controls.Add(Comida.MiPictureBox);
             marcador = new Marcador();
-            Controls.Add( Marcador.MiLabel );
+            Controls.Add(marcador.MiLabel);
             marcador.MiLabel.SendToBack();
         }
 
@@ -50,14 +50,29 @@ namespace Snake_VJ1208
 
         public class Marcador
         {
-            private Label MiLabel = new Label();
+            public Label MiLabel = new Label();
             public Marcador()
             {
                 MiLabel.Font = new Font("Courier", 18);
-                MiLabel.AutoSize= true;
-                MiLabel.Location = new Point(200, 200);
+                MiLabel.AutoSize = true;
+                MiLabel.Left = 10;
+                MiLabel.Top = 20;
                 MiLabel.Text = "Puntos: " + Convert.ToString(puntos) + "\n" + "Tiempo de vida: " + Convert.ToString(tiempo);
             }
+        }
+
+        public class Serpiente
+            {
+                
+            }
+
+        public class Segmento
+        {
+            public PictureBox parte= new PictureBox();
+            public int posx;
+            public int posy;
+            public String color;
+            public int tamaño;
         }
 
         private void Form1_KeyDown(object sender, KeyEventArgs e)
