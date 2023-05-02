@@ -28,9 +28,10 @@ namespace Pruebas
         {
             InitializeComponent();
             marcador = new Marcador();
+            Controls.Add(marcador.MiLabel);
             //cabeza = new Segmento(Color.Green,200,200);
             //Controls.Add(cabeza.MiPictureBox);
-            serpiente = new Serpiente(Controls);  
+            serpiente = new Serpiente(Controls);
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -121,7 +122,10 @@ namespace Pruebas
             { 
                 MiPictureBox.Top = MiPictureBox.Top + n;
             }
-
+            public void Actualizar()
+            {
+                MiPictureBox.Refresh();
+            }
         }
         private void Form1_KeyDown(object sender, KeyEventArgs e, Keys direccion)
         {
@@ -145,18 +149,15 @@ namespace Pruebas
 
             }
 
-            serpiente.MoverSerpiente(direccion);
         }
 
-        private void Form1_Paint(object sender, PaintEventArgs e, Control.ControlCollection c, List<Segmento>  cola)
-        {
-            foreach (Segmento segmento in cola)
-            {
-                c.Add(segmento.MiPictureBox);
-            }
-            c.Add(cabeza.MiPictureBox);
-            Controls.Add(marcador.MiLabel);
-            this.Invalidate();
-        }
+        //private void Form1_Paint(object sender, PaintEventArgs e, Control.ControlCollection c, List<Segmento>  cola)
+        //{
+            //foreach (Segmento segmento in cola)
+            //{
+                //segmento.Actualizar();
+            //}
+            //this.Invalidate();
+        //}
     }
 }
