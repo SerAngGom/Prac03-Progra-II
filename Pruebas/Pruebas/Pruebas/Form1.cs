@@ -18,13 +18,12 @@ namespace Pruebas
         public static int tiempo;
         private Marcador marcador;
         private Serpiente serpiente;
-        private Segmento cabeza;
-        private Segmento cola;
         public const Keys arriba = Keys.Up;
         public const Keys abajo = Keys.Down;
         public const Keys izquierda = Keys.Left;
         public const Keys derecha = Keys.Right;
         public Keys direccion = Keys.Right;
+        public List<Segmento> cola = new List<Segmento>();
         public Form1()
         {
             InitializeComponent();
@@ -32,7 +31,7 @@ namespace Pruebas
             Controls.Add(marcador.MiLabel);
             //cabeza = new Segmento(Color.Green,200,200);
             //Controls.Add(cabeza.MiPictureBox);
-            serpiente = new Serpiente(Controls);
+            serpiente = new Serpiente(Controls, cola);
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -63,7 +62,7 @@ namespace Pruebas
             private Control.ControlCollection controls;
             
 
-            public Serpiente(Control.ControlCollection c)
+            public Serpiente(Control.ControlCollection c, List<Segmento> cola)
             {
                 posx = 200;
                 posy = 200;
@@ -80,7 +79,7 @@ namespace Pruebas
                 c.Add(cabeza.MiPictureBox);
 
             }
-            public void MoverSerpiente (Keys direccion,Segmento[] cola)
+            public void MoverSerpiente (Keys direccion, List<Segmento> cola)
             {
                 
                 if (direccion == arriba)

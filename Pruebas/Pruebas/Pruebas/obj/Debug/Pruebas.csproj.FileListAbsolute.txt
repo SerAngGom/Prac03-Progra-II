@@ -28,3 +28,14 @@ C:\Users\angul\Desktop\Repositorios gitHub\Prac03-Progra-II\Pruebas\Pruebas\Prue
 C:\Users\angul\Desktop\Repositorios gitHub\Prac03-Progra-II\Pruebas\Pruebas\Pruebas\obj\Debug\Pruebas.csproj.CoreCompileInputs.cache
 C:\Users\angul\Desktop\Repositorios gitHub\Prac03-Progra-II\Pruebas\Pruebas\Pruebas\obj\Debug\Pruebas.exe
 C:\Users\angul\Desktop\Repositorios gitHub\Prac03-Progra-II\Pruebas\Pruebas\Pruebas\obj\Debug\Pruebas.pdb
+C:\Users\Ppcano\Documents\GitHub\Prac03-Progra-II\Pruebas\Pruebas\Pruebas\obj\Debug\Pruebas.csproj.AssemblyReference.cache
+C:\Users\Ppcano\Documents\GitHub\Prac03-Progra-II\Pruebas\Pruebas\Pruebas\obj\Debug\Pruebas.csproj.SuggestedBindingRedirects.cache
+C:\Users\Ppcano\Documents\GitHub\Prac03-Progra-II\Pruebas\Pruebas\Pruebas\obj\Debug\Pruebas.Form1.resources
+C:\Users\Ppcano\Documents\GitHub\Prac03-Progra-II\Pruebas\Pruebas\Pruebas\obj\Debug\Pruebas.Properties.Resources.resources
+C:\Users\Ppcano\Documents\GitHub\Prac03-Progra-II\Pruebas\Pruebas\Pruebas\obj\Debug\Pruebas.csproj.GenerateResource.cache
+C:\Users\Ppcano\Documents\GitHub\Prac03-Progra-II\Pruebas\Pruebas\Pruebas\obj\Debug\Pruebas.csproj.CoreCompileInputs.cache
+C:\Users\Ppcano\Documents\GitHub\Prac03-Progra-II\Pruebas\Pruebas\Pruebas\obj\Debug\Pruebas.exe
+C:\Users\Ppcano\Documents\GitHub\Prac03-Progra-II\Pruebas\Pruebas\Pruebas\obj\Debug\Pruebas.pdb
+C:\Users\Ppcano\Documents\GitHub\Prac03-Progra-II\Pruebas\Pruebas\Pruebas\bin\Debug\Pruebas.exe.config
+C:\Users\Ppcano\Documents\GitHub\Prac03-Progra-II\Pruebas\Pruebas\Pruebas\bin\Debug\Pruebas.exe
+C:\Users\Ppcano\Documents\GitHub\Prac03-Progra-II\Pruebas\Pruebas\Pruebas\bin\Debug\Pruebas.pdb
