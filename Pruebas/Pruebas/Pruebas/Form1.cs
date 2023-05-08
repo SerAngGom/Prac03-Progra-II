@@ -84,26 +84,26 @@ namespace Pruebas
                 
                 if (direccion == arriba)
                 {
-                    cola[0].CambiaPosY(-5);
+                    cola[0].CambiaPosY( - 5);
                 }
                 else if (direccion == abajo)
                 {
-                    cola[0].CambiaPosY(5);
+                    cola[0].CambiaPosY( + 5);
                 }
                 else if (direccion == izquierda)
                 {
-                    cola[0].CambiaPosX(-5);
+                    cola[0].CambiaPosX( - 5);
                 }
                 else if (direccion == derecha)
                 {
-                    cola[0].CambiaPosX(5);
+                    cola[0].CambiaPosX(+ 5);
                 }
                 for (int i = 0; i < cola.Count() - 1; i++)
                 {
-                    posxanterior = cola[i].MiPictureBox.Left;
-                    posyanterior = cola[i].MiPictureBox.Top;
-                    cola[i + 1].CambiaPosY(posxanterior - cola[i].MiPictureBox.Left);
-                    cola[i + 1].CambiaPosX(posyanterior - cola[i].MiPictureBox.Top);
+                    posxanterior = cola[i].posicionx;
+                    posyanterior = cola[i].posiciony;
+                    cola[i + 1].CambiaPosX(posxanterior);
+                    cola[i + 1].CambiaPosY(posyanterior);
                 }
             }
 
@@ -113,7 +113,8 @@ namespace Pruebas
         public class Segmento 
         {
             public PictureBox MiPictureBox = new PictureBox();
-
+            public int posicionx { get; set; }
+            public int posiciony { get; set; }
             public Segmento(Color color, int posicionx, int posiciony)
             {
                 MiPictureBox.BackColor = color;
@@ -121,6 +122,8 @@ namespace Pruebas
                 MiPictureBox.Left = posicionx;
                 MiPictureBox.Width = 25;
                 MiPictureBox.Height = 25;
+                this.posicionx= posicionx;
+                this.posiciony = posiciony;
             }
             public void CambiaPosX(int n)
             {
