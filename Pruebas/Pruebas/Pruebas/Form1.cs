@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Xml.Schema;
 using static Pruebas.Form1;
 
 namespace Pruebas
@@ -60,7 +61,7 @@ namespace Pruebas
             private int n_cola = 1;
             private Segmento cabeza;
             private Control.ControlCollection controls;
-            public List<Segmento> cola = new List<Segmento>();
+            
 
             public Serpiente(Control.ControlCollection c)
             {
@@ -79,23 +80,9 @@ namespace Pruebas
                 c.Add(cabeza.MiPictureBox);
 
             }
-<<<<<<< HEAD
-             public void ActualizarPosicionCola()
+            public void MoverSerpiente (Keys direccion,Segmento[] cola)
             {
-            for (int i = cola.Count - 1; i > 0; i--)
-                {
-                    cola[i].CambiaPosX(cola[i - 1].MiPictureBox.Left - cola[i].MiPictureBox.Left);
-                    cola[i].CambiaPosY(cola[i - 1].MiPictureBox.Top - cola[i].MiPictureBox.Top);
-                }
-            }
-    public void MoverSerpiente (Keys direccion,Segmento[] )
-            {
-                ActualizarPosicionCola();   
                 
-=======
-            public void MoverSerpiente (Keys direccion)
-            {
->>>>>>> parent of e4b7623 (Ultimos intentos 1)
                 if (direccion == arriba)
                 {
                     cola[0].CambiaPosY(-5);
@@ -111,12 +98,17 @@ namespace Pruebas
                 else if (direccion == derecha)
                 {
                     cola[0].CambiaPosX(5);
-<<<<<<< HEAD
-                } 
-=======
                 }
->>>>>>> parent of e4b7623 (Ultimos intentos 1)
+                for (int i = 0; i < cola.Count() - 1; i++)
+                {
+                    posxanterior = cola[i].MiPictureBox.Left;
+                    posyanterior = cola[i].MiPictureBox.Top;
+                    cola[i + 1].CambiaPosY(posxanterior - cola[i].MiPictureBox.Left);
+                    cola[i + 1].CambiaPosX(posyanterior - cola[i].MiPictureBox.Top);
+                }
             }
+
+
         }
 
         public class Segmento 
@@ -144,73 +136,42 @@ namespace Pruebas
                 MiPictureBox.Refresh();
             }
         }
-<<<<<<< HEAD
-
-        private void Form1_KeyDown(object sender, KeyEventArgs e)
-=======
-        private void Form1_KeyDown(object sender, KeyEventArgs e, Keys direccion)
->>>>>>> parent of e4b7623 (Ultimos intentos 1)
+     
+        private void Forms1_TeclaAbajo(object sender, KeyEventArgs e)
         {
             switch (e.KeyCode)
             {
                 case arriba:
-<<<<<<< HEAD
-                direccion = arriba;
-                serpiente.MoverSerpiente(direccion);
-                break;
-                case abajo:
-                direccion = abajo;
-                serpiente.MoverSerpiente(direccion);
-                break;
-                case izquierda:
-                direccion = izquierda;
-                    serpiente.MoverSerpiente(direccion);
-                    break;
-                case derecha:
-                direccion = derecha;
-                    serpiente.MoverSerpiente(direccion);
-                    break;
-                default:
-                    this.direccion = direccion;
-                    serpiente.MoverSerpiente(direccion);
-                    break;
-
-            }
-=======
                     direccion = arriba;
+                    serpiente.MoverSerpiente(direccion, cola);
                     break;
                 case abajo:
                     direccion = abajo;
+                    serpiente.MoverSerpiente(direccion, cola);
                     break;
                 case izquierda:
                     direccion = izquierda;
+                    serpiente.MoverSerpiente(direccion, cola);
                     break;
                 case derecha:
                     direccion = derecha;
+                    serpiente.MoverSerpiente(direccion, cola);
                     break;
                 default:
                     this.direccion = direccion;
+                    serpiente.MoverSerpiente(direccion, cola);
                     break;
 
             }
-
->>>>>>> parent of e4b7623 (Ultimos intentos 1)
         }
 
         //private void Form1_Paint(object sender, PaintEventArgs e, Control.ControlCollection c, List<Segmento>  cola)
         //{
-            //foreach (Segmento segmento in cola)
-            //{
-                //segmento.Actualizar();
-            //}
-            //this.Invalidate();
+        //foreach (Segmento segmento in cola)
+        //{
+        //segmento.Actualizar();
         //}
-<<<<<<< HEAD
         //this.Invalidate();
         //}
-
-        
-=======
->>>>>>> parent of e4b7623 (Ultimos intentos 1)
     }
 }
