@@ -61,7 +61,7 @@ namespace Pruebas
             private int n_cola = 1;
             private Segmento cabeza;
             private Control.ControlCollection controls;
-            public List<Segmento> cola = new List<Segmento>();
+            
 
             public Serpiente(Control.ControlCollection c)
             {
@@ -137,24 +137,25 @@ namespace Pruebas
             }
         }
 
-        private void Form1_KeyDown(object sender, KeyEventArgs e, Segmento[] cola)
+     
+        private void Forms1_TeclaAbajo(object sender, KeyEventArgs e)
         {
             switch(e.KeyCode)
             {
                 case arriba:
-                direccion = arriba;
-                serpiente.MoverSerpiente(direccion, cola);
-                break;
+                    direccion = arriba;
+                    serpiente.MoverSerpiente(direccion, cola);
+                    break;
                 case abajo:
-                direccion = abajo;
-                serpiente.MoverSerpiente(direccion, cola);
-                break;
+                    direccion = abajo;
+                    serpiente.MoverSerpiente(direccion, cola);
+                    break;
                 case izquierda:
-                direccion = izquierda;
+                    direccion = izquierda;
                     serpiente.MoverSerpiente(direccion, cola);
                     break;
                 case derecha:
-                direccion = derecha;
+                    direccion = derecha;
                     serpiente.MoverSerpiente(direccion, cola);
                     break;
                 default:
