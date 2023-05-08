@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Xml.Schema;
 using static Pruebas.Form1;
 
 namespace Pruebas
@@ -79,8 +80,9 @@ namespace Pruebas
                 c.Add(cabeza.MiPictureBox);
 
             }
-            public void MoverSerpiente (Keys direccion)
+            public void MoverSerpiente (Keys direccion,Segmento[] cola)
             {
+                
                 if (direccion == arriba)
                 {
                     cola[0].CambiaPosY(-5);
@@ -96,6 +98,13 @@ namespace Pruebas
                 else if (direccion == derecha)
                 {
                     cola[0].CambiaPosX(5);
+                }
+                for (int i = 0; i < cola.Count() - 1; i++)
+                {
+                    posxanterior = cola[i].MiPictureBox.Left;
+                    posyanterior = cola[i].MiPictureBox.Top;
+                    cola[i + 1].CambiaPosY(posxanterior - cola[i].MiPictureBox.Left);
+                    cola[i + 1].CambiaPosX(posyanterior - cola[i].MiPictureBox.Top);
                 }
             }
 
@@ -127,37 +136,42 @@ namespace Pruebas
                 MiPictureBox.Refresh();
             }
         }
-        private void Form1_KeyDown(object sender, KeyEventArgs e, Keys direccion)
+
+        private void Form1_KeyDown(object sender, KeyEventArgs e, Segmento[] cola)
         {
-            switch (e.KeyCode)
+            switch(e.KeyCode)
             {
                 case arriba:
-                    direccion = arriba;
-                    break;
+                direccion = arriba;
+                serpiente.MoverSerpiente(direccion, cola);
+                break;
                 case abajo:
-                    direccion = abajo;
-                    break;
+                direccion = abajo;
+                serpiente.MoverSerpiente(direccion, cola);
+                break;
                 case izquierda:
-                    direccion = izquierda;
+                direccion = izquierda;
+                    serpiente.MoverSerpiente(direccion, cola);
                     break;
                 case derecha:
-                    direccion = derecha;
+                direccion = derecha;
+                    serpiente.MoverSerpiente(direccion, cola);
                     break;
                 default:
                     this.direccion = direccion;
+                    serpiente.MoverSerpiente(direccion, cola);
                     break;
 
             }
-
         }
 
         //private void Form1_Paint(object sender, PaintEventArgs e, Control.ControlCollection c, List<Segmento>  cola)
         //{
-            //foreach (Segmento segmento in cola)
-            //{
-                //segmento.Actualizar();
-            //}
-            //this.Invalidate();
+        //foreach (Segmento segmento in cola)
+        //{
+        //segmento.Actualizar();
+        //}
+        //this.Invalidate();
         //}
     }
 }
